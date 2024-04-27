@@ -15,7 +15,7 @@ export default function Cart() {
     <div className="flex justify-center">
       {cart && cart.length ? (
         <div>
-          <div className="min-h-[60vh] grid md:grid-cols-2 max-w-6xl mx-auto">
+          <div className="min-h-[80vh] grid md:grid-cols-2 max-w-6xl mx-auto">
             <div className="flex flex-col justify-center items-center p-3">
               {cart.map((cartItem) => (
                 <CartTile cartItem={cartItem} />
@@ -28,12 +28,12 @@ export default function Cart() {
                 Your cart Summary
               </h1>
               <p>
-                <span className="text-gray-800 font-bold">Total Items:</span>
-                <span>{cart.length}</span>
+                <span className="text-gray-800 font-bold">Total Items</span>
+                <span>: {cart.length}</span>
               </p>
               <p>
-                <span className="text-gray-800 font-bold">Total amount:</span>
-                <span>{totalCart}</span>
+                <span className="text-gray-800 font-bold">Total amount</span>
+                <span>: {totalCart}</span>
               </p>
             </div>
           </div>
@@ -43,8 +43,8 @@ export default function Cart() {
           <h1 className="text-gray-800 font-bold text-xl mb-2">
             Your cart is empty
           </h1>
-          <Link to={"/"}>
-            <button className="bg-red-950 text-white border-2 round-lg font-bold p-4">
+          <Link to="/">
+            <button className="bg-red-950 text-white border-2 rounded-lg font-bold p-4">
               SHOP NOW
             </button>
           </Link>

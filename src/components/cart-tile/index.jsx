@@ -1,5 +1,10 @@
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "../../store/slices/cart-slice";
 export default function CartTile({ cartItem }) {
-  function handleRemoveFromCart() {}
+  const dispatch = useDispatch();
+  function handleRemoveFromCart() {
+    dispatch(removeFromCart(cartItem.id));
+  }
   return (
     <div>
       <div className="flex items-center p-5 justify-between bg-red-500 mt-2 mb-2 rounded-xl">
